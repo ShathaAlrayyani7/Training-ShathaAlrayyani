@@ -1,0 +1,13 @@
+{
+  "name": "Training-ShathaAlrayyani",
+  "version": "1.0.0",
+  "description": "sociuemtech training - code challanges",
+  "main": "index.js",
+  "repository": "https://github.com/ShathaAlrayyani7/Training-ShathaAlrayyani.git",
+  "author": "Shatha Al Rayyani",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^8.26.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
