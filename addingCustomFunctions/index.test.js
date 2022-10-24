@@ -7,46 +7,48 @@
  */
 
 //  TODO
-function sortArr(arr){
-    for(let i=0;i<arr.length;i++){
-        for(let j=0;j<arr.length;j++){
-            if(arr[i]<arr[j]){
-                let temp = arr[i]
-                arr[i] = arr[j]
-                arr[j] = temp
+
+Array.prototype.sortArr = function(){
+    for(let i=0;i<this.length;i++){
+        for(let j=0;j<this.length;j++){
+            if(this[i]<this[j]){
+                let temp = this[i]
+                this[i] = this[j]
+                this[j] = temp
             }
         }
     }
-    return arr
+    return this
 }
 
-function getFirst(arr){
-    return arr[0]
+Array.prototype.getFirst = function(){
+    return this[0]
 }
 
-function getLast(arr){
-    return arr[arr.length-1]
+Array.prototype.getLast = function (){
+    return this[this.length-1]
 }
 
- function search(arr,x){
-    for(let i=0; i< arr.length; i++){
-        if (arr[i] == x){
+Array.prototype.search =  function(x){
+    for(let i=0; i< this.length; i++){
+        if (this[i] == x){
             return true
-        }
-        else{
-            return false
-        }
-        
+        }     
     }
+    return false
  }
+
+
+
 let temp = [3,1,6,2]
 
-console.log(sortArr(temp))
 console.log("*********")
-console.log(getFirst(temp))
+console.log(temp.sortArr())
 console.log("*********")
-console.log(getLast(temp))
+console.log(temp.getFirst())
 console.log("*********")
-console.log(search(temp,7))
+console.log(temp.getLast())
+console.log("*********")
+console.log(temp.search(7))
 
 
