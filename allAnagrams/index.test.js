@@ -17,6 +17,7 @@
 
 const allAnagrams = function(string) {
   len = string.length
+  let newArr = []
   if(len == 0 ){
     return "This string is empty"
   }
@@ -24,11 +25,9 @@ const allAnagrams = function(string) {
     newArr.push(string)
     return newArr
   }
-
-  let newArr = []
   for(let i = 0;i < len;i++){
     let newStr = string[i]
-    for(let j = 0;i< len;j++){
+    for(let j = 0;j< len;j++){
       if(i!=j){
         newStr += string[j]
         if(newStr.length == len){
@@ -41,7 +40,7 @@ const allAnagrams = function(string) {
   return newArr
 }
 
-let dana = "abcd"
+let temp = "abcd"
 
 
-console.log(allAnagrams(dana));
+console.log(allAnagrams(temp));
