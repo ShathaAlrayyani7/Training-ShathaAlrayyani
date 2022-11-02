@@ -5,23 +5,27 @@
     padding: 0;
 }
 
-.body{
+.container{
     display: grid;
     font-family: Arial;
     grid-template: 
     [row1-start]"header header header header" 130px [row1-end]
     [row2-start]"sec sec sec sec" [row2-end]
     / 1fr 1fr 1fr 1fr ;
+    background-color: rgb(79, 63, 179);
+
     
 }
 
 .header{
+    background-color: rgb(79, 63, 179);
+    position:fixed;
     width: 100%;
-    background-color: darkslateblue;
     padding: 1rem;
     grid-area: header;
     display: flex;
     flex-direction: column;
+    z-index: 10;
 }
 /* hight = 1422 */
 .section{
@@ -31,7 +35,7 @@
     padding-top: 3rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem 2rem;
+    gap: 2.5rem 2.5rem;
     justify-content: space-evenly;
     align-items:stretch;
 
@@ -47,8 +51,8 @@
     flex-basis:auto;
     border-radius: 25px 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* flex-basis:auto; */
 }
+
 
 .bgColor{
     width: 100%;
@@ -72,7 +76,7 @@
     border-radius: 15px 50px;    
 }
 h2{
-    color: antiquewhite;
+    color: sandybrown;
 }
 
 .infoText{
@@ -82,13 +86,13 @@ h2{
 @media screen and (max-width: 1422px){
   
     .section{
-        align-items:center;
+        align-items:flex-start;
     }
 }
 @media screen and (max-width: 1100px){
   
     .section{
-        justify-content:space-evenly;
+        align-items:flex-start;
         padding-left: 1rem;
     }
 }
