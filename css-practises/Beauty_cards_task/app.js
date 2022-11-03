@@ -99,7 +99,7 @@ class Card {
             this.selectedColors.splice(index, 1);
             this.cardButton.setAttribute("style", "background-color:cadetblue")
             this.card.style.transform = "scale(1)";
-            this.card.style.transition = "all 1s"
+            this.card.style.transition = "all 1s";
             this.cardButton.innerText = 'Select'
 
         } else {
@@ -191,7 +191,7 @@ class AllData {
                 for (let i = 0; i < cardsData.length; i++) {
                     cardsData[i]['hex'] = hex[i];
                 }
-                // console.log(cardsData);
+                console.log(cardsData);
                 this.drawCard(cardsData);
             })
             .catch(err => { console.log(err) });
