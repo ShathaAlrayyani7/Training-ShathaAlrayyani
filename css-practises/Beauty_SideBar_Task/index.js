@@ -1,6 +1,5 @@
 "use strict"
 
-
 class SideBar{
     constructor(url,img){
         this.nav = document.createElement('a');
@@ -25,7 +24,7 @@ class SideBar{
 
 class Container{
     constructor(){
-        let url = 'https://external-preview.redd.it/Dd1pC21syTbrALPvPb5WSCXCFrVl99lUcqu0PxX-0ac.jpg?auto=webp&s=dab6461c462ade8d577f7ad31d80ff75ec90bc94'
+        let url = 'https://4kwallpapers.com/images/wallpapers/naruto-digital-art-black-background-amoled-3840x2160-5056.png'
         let body = document.getElementsByTagName('body')[0];
         let container = document.createElement('div');
         let section = document.createElement('div');
@@ -53,16 +52,17 @@ class Container{
     showSideBar = ()=> {
         console.log('hi');
         let sideBar = document.getElementById('sideBar')
-        sideBar.style.transition = "all 1s";
+        sideBar.style.transition = "0.5s";
         sideBar.style.width = "130px";
         sideBar.style.background = 'lightblue'
+        sideBar.style.whiteSpace = 'wrap'
     }
     
     hideSideBar = () =>{
         console.log('done');
         let sideBar = document.getElementById('sideBar')
         sideBar.style.overflowX = "hidden";
-        sideBar.style.transition = "all 1s";
+        sideBar.style.transition = "0.5s";
         sideBar.style.width = "0px";
         sideBar.style.whiteSpace = 'nowrap';
         sideBar.style.background = 'rgb(4, 3, 16)'
