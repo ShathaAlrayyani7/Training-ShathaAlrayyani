@@ -24,5 +24,30 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
  */
 
 function collatzSeq(number) {
-// TO DO
+    let num = []
+    if(number <= 0){
+        return 'This number is not valid'
+    }
+    function rec(number) {
+        if(number == 1){
+            num.push(number)
+            return num
+        }
+
+        if(number % 2 == 0){
+            num.push(number);
+            return rec(number/2)
+        }
+        else{
+            num.push(number);
+            return rec((3 * number) + 1)
+        }
+        
+    }
+    rec(number);
+    return num
 }
+
+collatzSeq(25)
+console.log(collatzSeq(223));
+
