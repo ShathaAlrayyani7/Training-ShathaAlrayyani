@@ -16,7 +16,6 @@ class Hand{
         minHand.setAttribute('id','minHand');
         minHand.style.width = '7px';
 
-        
         hourHand.setAttribute('class','hands');
         hourHand.setAttribute('id','hourHand');
         hourHand.style.height = '110px'
@@ -36,6 +35,7 @@ class Hand{
     }
     
     time = () =>{
+        setTimeout(this.setClock);
         setInterval(this.setClock,1000)
     }
 
