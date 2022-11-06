@@ -1,0 +1,79 @@
+:root{
+    --rotation: 0;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.clock{
+    background-color: floralwhite;
+    width: 360px;
+    height: 360px;
+    display: flex;
+    border-radius: 15px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+}
+
+.numbers{
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.hands{
+    
+    position: absolute;
+    width: 10px;
+    height: 150px;
+    bottom: 52%;
+    left: 50%;
+    background-color: black;
+    transform-origin: bottom;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    z-index: 5;
+}
+#number-3{
+    top:45%;
+    left: 48%
+}
+
+#number-6{
+    top:88%
+}
+
+#number-9{
+    top:45%;
+    right: 48%
+}
+/* translateX(-50%) */
+.center{
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    z-index:10;
+    background-color: black;
+}

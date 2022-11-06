@@ -187,7 +187,9 @@ class AllData {
             .then(response => response.json())
             .then(data => {
                 let cardsData = data.splice(0, 20)
+                console.log(cardsData);
                 let hex = this.generateRandomColor()
+                console.log(hex);
                 for (let i = 0; i < cardsData.length; i++) {
                     cardsData[i]['hex'] = hex[i];
                 }
@@ -195,7 +197,6 @@ class AllData {
                 this.drawCard(cardsData);
             })
             .catch(err => { console.log(err) });
-
 
     }
 }
