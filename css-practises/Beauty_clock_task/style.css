@@ -1,6 +1,9 @@
 :root{
+    --clockColor :floralwhite;
+    --handsColor : black;
     --rotation: 0;
-
+    --hands-z-index: 5;
+    --center-z-index: 10;
 }
 
 * {
@@ -10,70 +13,104 @@
 }
 
 .container{
-    width: 100%;
+    align-items: center;
     display: flex;
     height: 100vh;
-    align-items: center;
     justify-content: center;
+    width: 100%;
 
 }
 
 .clock{
-    background-color: floralwhite;
-    width: 360px;
-    height: 360px;
-    display: flex;
+    
+    background-color: var(--clockColor);
     border-radius: 15px;
+    border: 2px solid var(--handsColor);
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    grid-template-rows: repeat(3,200px);
+    grid-template-areas: ". num12 ." "num9 hands num3" ". num6 .";
+    justify-content: stretch;
+    align-content: stretch;
+    height: 600px;
     position: relative;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid black;
+    width: 600px;
 }
 
 .numbers{
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    text-align: center;
     font-size: 1.5rem;
+    padding: 1rem;
+    justify-self: center;
+    position: absolute;
 }
 
-.hands{
-    
+.number-3{
+    grid-area: num3;
+    justify-self: end;
+    align-self: center;
+}
+
+.number-6{
+    grid-area: num6;
+    justify-self: center;
+    align-self: end;
+}
+
+.number-9{
+    grid-area: num9;
+    justify-self: start;
+    align-self: center;
+}
+.number-12{
+    grid-area: num12;
+    justify-self: center;
+    align-self: start;
+}
+
+.hands{ 
+    background-color: var(--handsColor);
+    height: 300px;
     position: absolute;
-    width: 10px;
-    height: 150px;
-    bottom: 52%;
-    left: 50%;
-    background-color: black;
     transform-origin: bottom;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
-    z-index: 5;
+    width: 10px;
+    z-index: var(--hands-z-index);
+    border-radius: 10px;
+    
+    
 }
-#number-3{
-    top:45%;
-    left: 48%
+.hands-cont{
+    grid-area: hands;    
 }
 
-#number-6{
-    top:88%
-}
-
-#number-9{
-    top:45%;
-    right: 48%
-}
-/* translateX(-50%) */
-.center{
-    position: absolute;
-    transform: translateX(-50%);
-    bottom: 50%;
+.secHand{   
+    background-color: red;
+    width: 3px;
+    top: 0;
     left: 50%;
-    width: 20px;
-    height: 20px;
+}
+
+.minHand{
+    width: 7px;
+    top: 10%;
+    left: 50%;
+}
+
+.hourHand{
+    height: 115px;
+    top: 20%;
+    left: 50%;
+}
+
+
+.center{
+    background-color: var(--handsColor);
     border-radius: 20px;
-    z-index:10;
-    background-color: black;
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    z-index:var(--center-z-index);
 }

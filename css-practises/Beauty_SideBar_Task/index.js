@@ -16,7 +16,7 @@ class SideBar{
         
     }
     
-    getNav = () =>{
+    get nav () {
         return this.nav
     }
     
@@ -92,8 +92,6 @@ class Container{
         for(let i = 0 ; i < data.length ; i++){
 
             sideBar.append(new SideBar(data[i].url, data[i].img).getNav());
-            console.log();
-
         }
 
         } 

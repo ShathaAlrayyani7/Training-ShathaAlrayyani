@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "sociuemtech training - code challanges",
   "main": "index.js",
+  "type": "module",
   "repository": "https://github.com/ShathaAlrayyani7/Training-ShathaAlrayyani.git",
   "author": "Shatha Al Rayyani",
   "license": "MIT",
