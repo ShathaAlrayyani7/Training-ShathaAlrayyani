@@ -1,19 +1,20 @@
 'use strict';
+
 class Hand{
     constructor(){
         this.clock = document.createElement('div');
         this.clock.setAttribute('class','hands-cont')
         let data = ["hands secHand","hands minHand","hands hourHand","center"]
         for(let i =0;i<4 ; i++){
-            let ele = document.createElement('div')
-            ele.setAttribute('class',`${data[i]}`)
-            this.clock.appendChild(ele);
+            let element = document.createElement('div')
+            element.setAttribute('class',`${data[i]}`)
+            this.clock.appendChild(element);
         }
 
         
     }
     
-    getClock = () =>{
+    get getClock (){
         return this.clock
     }
     
@@ -37,14 +38,16 @@ class Hand{
         hourHand.style.setProperty('--rotation', hourRatio * 360); 
     }
     
-
-
 }
-class ClockNum{
+
+
+class Clock{
+
     constructor(){
         let body = document.getElementsByTagName('body')[0];
         let container = document.createElement('div');
         let clock = document.createElement('div');
+
         let num = 3;
         for(let i = 0; i < 4;i++){
             let number = document.createElement('div');
@@ -66,13 +69,12 @@ class ClockNum{
     clockData = () => {
         let clock = document.getElementsByClassName('clock')[0];
         let hands = new Hand();
-        clock.append(hands.getClock());
+        clock.append(hands.getClock);
         hands.time()
-        
-        console.log(clock);
+    
     }
 
 }
 
-let clock = new ClockNum()
+let clock = new Clock()
 clock.clockData();

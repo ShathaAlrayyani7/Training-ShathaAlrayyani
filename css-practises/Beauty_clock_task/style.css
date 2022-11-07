@@ -1,9 +1,11 @@
 :root{
-    --clockColor :floralwhite;
-    --handsColor : black;
-    --rotation: 0;
-    --hands-z-index: 5;
     --center-z-index: 10;
+    --clockColor :darkslategrey;
+    --font:'Courier New', Courier, monospace;
+    --hands-z-index: 5;
+    --handsColor : white;
+    --rotation: 0;
+    --secHandColor: palevioletred;
 }
 
 * {
@@ -22,94 +24,90 @@
 }
 
 .clock{
-    
     background-color: var(--clockColor);
-    border-radius: 15px;
-    border: 2px solid var(--handsColor);
+    border-radius: 300px;
+    box-shadow: 0 0 10px 10px var(--clockColor), inset 0 0 15px;
     display: grid;
-    grid-template-columns: repeat(3,200px);
-    grid-template-rows: repeat(3,200px);
-    grid-template-areas: ". num12 ." "num9 hands num3" ". num6 .";
-    justify-content: stretch;
-    align-content: stretch;
+    grid-template:[row1-start]". num12 ."[row1-end] [row2-start]"num9 hands num3"[row2-end] [row3-start]". num6 ."[row3-end]/ 200px 200px 200px;
     height: 600px;
     position: relative;
     width: 600px;
 }
 
 .numbers{
-    font-size: 1.5rem;
-    padding: 1rem;
+    font-size: 3rem;
+    font-family: var(--font);
+    font-weight: bold;
     justify-self: center;
+    padding: 2rem;
     position: absolute;
+    color:var(--handsColor);
 }
 
 .number-3{
+    align-self: center;
     grid-area: num3;
     justify-self: end;
-    align-self: center;
 }
 
 .number-6{
+    align-self: end;
     grid-area: num6;
     justify-self: center;
-    align-self: end;
 }
 
 .number-9{
+    align-self: center;
     grid-area: num9;
     justify-self: start;
-    align-self: center;
 }
 .number-12{
+    align-self: start;
     grid-area: num12;
     justify-self: center;
-    align-self: start;
 }
 
 .hands{ 
     background-color: var(--handsColor);
-    height: 300px;
+    border-radius: 10px;  
+    height: 250px;
     position: absolute;
     transform-origin: bottom;
     transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
     width: 10px;
     z-index: var(--hands-z-index);
-    border-radius: 10px;
-    
-    
 }
 .hands-cont{
     grid-area: hands;    
 }
 
 .secHand{   
-    background-color: red;
-    width: 3px;
-    top: 0;
+    background-color: var(--secHandColor);
     left: 50%;
+    top: 9%;
+    width: 3px;
 }
 
 .minHand{
-    width: 7px;
-    top: 10%;
     left: 50%;
+    top: 9%;
+    width: 7px;
 }
 
 .hourHand{
-    height: 115px;
-    top: 20%;
-    left: 50%;
+    height: 200px;
+    left: 49%;
+    top: 17%;
 }
 
 
 .center{
     background-color: var(--handsColor);
     border-radius: 20px;
+    bottom: 48%;
     height: 20px;
-    left: 50%;
     position: absolute;
-    top: 50%;
+    right: 47%;
     transform: translateX(-50%);
     width: 20px;
     z-index:var(--center-z-index);
