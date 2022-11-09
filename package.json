@@ -1,13 +1,21 @@
 {
-  "name": "Training-ShathaAlrayyani",
+  "name": "training-shatha-alrayyani",
   "version": "1.0.0",
   "description": "sociuemtech training - code challanges",
   "main": "index.js",
   "repository": "https://github.com/ShathaAlrayyani7/Training-ShathaAlrayyani.git",
   "author": "Shatha Al Rayyani",
+  "scripts": {
+    "test": "jest",
+    "lint": "tsc --noEmit --incremental && eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint-and-fix": "yarn lint --fix"
+  },
   "license": "MIT",
   "dependencies": {
     "eslint": "^8.26.0",
     "eslint-config-google": "^0.14.0"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
   }
 }
