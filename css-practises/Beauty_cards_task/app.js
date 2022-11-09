@@ -106,7 +106,6 @@ class Card {
             this.card.classList.add('selected');
             this.selectedColors.push(colorName)
             this.cardButton.setAttribute("style", "background-color:lightgreen")
-            // console.log();
             this.card.style.transform = "scale(1.07)";
             this.card.style.transition = "all 1s"
             this.cardButton.innerText = 'Selected'

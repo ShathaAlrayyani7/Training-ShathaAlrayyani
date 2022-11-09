@@ -9,8 +9,9 @@
     margin: 0;
     padding: 0;
 }
+
 .container{
-    display: flex;
+    /* display: flex; */
     height: 100vh;
     max-width: 100%;
 
@@ -30,7 +31,7 @@
     transition: 0.5s;
 }
 
-.sideBar.show{
+.show{
     background-color: var(--sideBar);
     transition: 0.5s;
     width: 130px;
@@ -40,19 +41,19 @@
     width: 100%;
 }
 
-.section{
+.ImgContainer{
     background-color: var(--background);
     display: flex;
     height:100vh;
     width: 100%;
 }
 
-.icons{
+.icon{
     height: 75px;
     width: 75px;
 }
 
-.nav{
+.navItem{
     display: flex;
     margin: 1rem;
     transform: scale(1);
@@ -60,7 +61,7 @@
     width: 100%;
 }
 
-.nav:hover{
+.navItem:hover{
     transform: scale(1.33);
     transition: 1s;
 }

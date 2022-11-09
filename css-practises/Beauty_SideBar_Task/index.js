@@ -2,17 +2,17 @@
 
 class NavItem{
     constructor(url,img){
-        this.nav = document.createElement('a');
+        this.navItem = document.createElement('a');
         let icon = document.createElement('img');
-        this.nav.setAttribute('class', 'nav');
-        this.nav.setAttribute('href', `${url}`)
-        icon.setAttribute('class', 'icons');
+        this.navItem.setAttribute('class', 'navItem');
+        this.navItem.setAttribute('href', `${url}`)
+        icon.setAttribute('class', 'icon');
         icon.setAttribute('src', `${img}`)
-        this.nav.appendChild(icon);
+        this.navItem.appendChild(icon);
     }
-    
-    get getNav() {
-        return this.nav
+
+    get NavItem() {
+        return this.navItem
     }
     
 }
@@ -22,7 +22,6 @@ class SideBar {
     constructor() {
         this.sideBar = document.createElement('div');
         this.sideBar.setAttribute('class', 'sideBar');
-        
         let data = [
             {
                 title: "Home", url: "https://en.wikipedia.org/wiki/Naruto", img: "./assets/icons8-naruto-sign-100.png"
@@ -42,12 +41,12 @@ class SideBar {
         ]
         
         for (let i = 0; i < data.length; i++) {
-            this.sideBar.append(new NavItem(data[i].url, data[i].img).getNav);
+            this.sideBar.append(new NavItem(data[i].url, data[i].img).NavItem);
         }
 
     }
     
-    get getSideBar(){
+    get SideBar(){
         return this.sideBar
     }
     
@@ -55,21 +54,22 @@ class SideBar {
 
 
 class ImgContainer {
+
     constructor() {
         let url = 'https://4kwallpapers.com/images/wallpapers/naruto-digital-art-black-background-amoled-3840x2160-5056.png'
-        this.section = document.createElement('div');
+        this.imgContainer = document.createElement('div');
         let background = document.createElement('img');
-        this.section.setAttribute('class', 'section');
+        this.imgContainer.setAttribute('class', 'ImgContainer');
         background.setAttribute('class', 'backgroundImg');
         background.setAttribute('src', url);
+        background.setAttribute('onerror',"this.onerror= null,this.src='https://images.hdqwalls.com/wallpapers/hatake-kakashi-naruto-anime-q5.jpg'")
         background.setAttribute('alt', 'Background Image');
         
-        this.section.appendChild(background);
-        
+        this.imgContainer.appendChild(background);        
     }
     
-    get getImgContainer(){
-        return this.section
+    get ImgContainer(){
+        return this.imgContainer
     }
     
 }
@@ -86,8 +86,9 @@ class Page{
     }
 
     renderPage = () => {
-        let sideBar = new SideBar().getSideBar;
-        let imgContainer = new ImgContainer().getImgContainer
+        let sideBar = new SideBar().SideBar ;
+        console.log(sideBar);
+        let imgContainer = new ImgContainer().ImgContainer ;
         let container = document.getElementsByClassName('container')[0];
         container.appendChild(sideBar);
         container.appendChild(imgContainer);
@@ -95,13 +96,13 @@ class Page{
     
     showSideBar = (event) => {
         let sideBar = document.getElementsByClassName('sideBar')[0];
-        const classList = Object.values(sideBar.classList ?? {});
+        const classList = Object.values(sideBar.classList ?? {});;
         const clientX = event
-        const x = document.documentElement.clientWidth
-        let percentage = (x * 10)/100 
-        let width = x - percentage
+        const screenWidth = document.documentElement.clientWidth
+        let sideBarWidth = (screenWidth * 10)/100 
+        let imgContainerWidth = screenWidth - sideBarWidth
         
-        if(clientX.clientX > width){
+        if(clientX.clientX > imgContainerWidth){
             sideBar.classList.add('show')
         }
         

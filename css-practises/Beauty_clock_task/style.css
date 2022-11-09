@@ -14,34 +14,33 @@
     padding: 0;
 }
 
-.container{
+.clockContainer{
     align-items: center;
     display: flex;
     height: 100vh;
     justify-content: center;
     width: 100%;
-
 }
 
 .clock{
     background-color: var(--clockColor);
-    border-radius: 300px;
+    border-radius:150px;
     box-shadow: 0 0 10px 10px var(--clockColor), inset 0 0 15px;
     display: grid;
     grid-template:[row1-start]". num12 ."[row1-end] [row2-start]"num9 hands num3"[row2-end] [row3-start]". num6 ."[row3-end]/ 200px 200px 200px;
     height: 600px;
     position: relative;
-    width: 600px;
+    width: 600px;  
 }
 
-.numbers{
-    font-size: 3rem;
+.number{
+    color:var(--handsColor);
     font-family: var(--font);
+    font-size: 4rem;
     font-weight: bold;
     justify-self: center;
     padding: 2rem;
     position: absolute;
-    color:var(--handsColor);
 }
 
 .number-3{
@@ -61,54 +60,55 @@
     grid-area: num9;
     justify-self: start;
 }
+
 .number-12{
     align-self: start;
     grid-area: num12;
     justify-self: center;
 }
 
-.hands{ 
+.hand{ 
     background-color: var(--handsColor);
     border-radius: 10px;  
     height: 250px;
     position: absolute;
     transform-origin: bottom;
     transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
-    width: 10px;
+    width: 15px;
     z-index: var(--hands-z-index);
 }
-.hands-cont{
+
+.hand-container{
     grid-area: hands;    
 }
 
 .secHand{   
     background-color: var(--secHandColor);
-    left: 50%;
+    left: 49.5%;
     top: 9%;
     width: 3px;
 }
 
 .minHand{
-    left: 50%;
+    left: 49.5%;
     top: 9%;
     width: 7px;
 }
 
 .hourHand{
-    height: 200px;
-    left: 49%;
-    top: 17%;
+    height: 180px;
+    left: 49.5%;
+    top: 20%;
 }
-
 
 .center{
     background-color: var(--handsColor);
-    border-radius: 20px;
-    bottom: 48%;
-    height: 20px;
+    border-radius: 30px;
+    bottom: 47%;
+    height: 30px;
     position: absolute;
-    right: 47%;
+    right: 45.5%;
     transform: translateX(-50%);
-    width: 20px;
+    width: 30px;
     z-index:var(--center-z-index);
 }
