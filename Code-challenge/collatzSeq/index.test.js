@@ -48,6 +48,14 @@ function collatzSeq(number) {
     return num
 }
 
-collatzSeq(25)
-console.log(collatzSeq(223));
+describe('collatzSeq', () => {
+    it('Collatz conjecture function returns an array of numbers', () => {
+      expect(collatzSeq(10)).toEqual([10,5,16,8,4,2,1]);
+      expect(collatzSeq(-5)).toEqual('This number is not valid');
+      expect(collatzSeq(0)).toEqual('This number is not valid');
+      expect(collatzSeq(1)).toEqual([1]);
+      expect(collatzSeq(25)).toEqual([25, 76, 38, 19, 58, 29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]);
+    })
+  })
+
 
