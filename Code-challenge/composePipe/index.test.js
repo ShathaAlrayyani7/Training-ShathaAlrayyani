@@ -40,7 +40,6 @@ let pipe = (...functions) => (...args) => {
     console.log(currFunction(prev));
     return currFunction(prev);
   }, args);
-  
 }
 
 let greet = (name) => {
