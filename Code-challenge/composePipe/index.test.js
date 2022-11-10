@@ -32,3 +32,34 @@
   var addAndMultiplyTwice = pipe(add2, multiplyBy3, multiplyBy3);
   addAndMultiplyTwice(5); //should be 63
  */
+let person = 'dana'; 
+
+
+let pipe = (...functions) => (...args) => {
+  return functions.reduce((prev, currFunction) => {
+    console.log(currFunction(prev));
+    return currFunction(prev);
+  }, args);
+  
+}
+
+let greet = (name) => {
+  return 'Hello '+ name
+}
+
+let exclaim = (name) =>{
+  return `${name}`.toUpperCase() + '!';
+}
+
+let adding = (welcomMsg) =>{
+  return welcomMsg + ' nice to meet you <3'
+}
+
+
+let welcome = pipe(greet,exclaim,adding)
+welcome(person);
+// console.log(welcome(person));
+
+
+
+
