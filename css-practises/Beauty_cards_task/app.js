@@ -160,7 +160,6 @@ class AllData {
 
     drawCard = cards => {
         let gridCards = document.getElementById('section');
-        console.log(gridCards);
         cards.forEach(card => {
             gridCards.append(new Card(card.title, card.id, card.hex).getCard());
         });
