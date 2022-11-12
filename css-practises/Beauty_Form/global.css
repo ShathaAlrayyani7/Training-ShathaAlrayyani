@@ -1,0 +1,17 @@
+@import 'Components/ImgContainer/style.css';
+@import url('Components/Button/style.css');
+@import url('Components/Form/style.css');
+@import url('Components/Form/FormItem/style.css');
+@import url('Components/FormContainer/style.css');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    height: 100vh;
+    width: 100%;
+
+}

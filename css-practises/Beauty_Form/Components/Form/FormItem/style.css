@@ -1,0 +1,16 @@
+
+
+.formItemContainer{
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    
+}
+
+.iconImg{
+    width: 35px;
+    height: 35px;
+    background-color: #fffacd;
+    padding: 0.1rem;
+}
+

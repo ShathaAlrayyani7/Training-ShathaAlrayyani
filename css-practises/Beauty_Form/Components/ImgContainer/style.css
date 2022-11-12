@@ -1,0 +1,11 @@
+
+.imgContainer{
+    height: 300px;
+    width: 300px;
+    display: flex;
+}
+
+.backgroundImg{
+    height: 600px;
+    width: 300px;
+}
