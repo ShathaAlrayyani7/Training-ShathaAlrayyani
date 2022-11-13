@@ -13,7 +13,16 @@
  */
 
 function isDeepEquals(obj1, obj2) {
-  // TO DO
+  if (obj1 == null || obj1== undefined || obj2 == null || obj2== undefined) {
+    return false
+  }
+  if(JSON.stringify(obj1) === JSON.stringify(obj2)){
+    return true
+  }
+  else{
+    return false
+  }
+  
 }
 
 

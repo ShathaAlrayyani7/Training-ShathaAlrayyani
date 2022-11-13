@@ -32,7 +32,16 @@
   var addAndMultiplyTwice = pipe(add2, multiplyBy3, multiplyBy3);
   addAndMultiplyTwice(5); //should be 63
  */
+
+'use strict'
 let person = 'dana'; 
+
+let compose = (...functions) => (...args) => {
+  return functions.reduceRight((prev, currFunction) => {
+    console.log(currFunction(prev));
+    return currFunction(prev);
+  }, args);
+}
 
 
 let pipe = (...functions) => (...args) => {
@@ -41,6 +50,7 @@ let pipe = (...functions) => (...args) => {
     return currFunction(prev);
   }, args);
 }
+
 
 let greet = (name) => {
   return 'Hello '+ name
@@ -54,11 +64,27 @@ let adding = (welcomMsg) =>{
   return welcomMsg + ' nice to meet you <3'
 }
 
+// *****************
 
-let welcome = pipe(greet,exclaim,adding)
+let welcome = pipe(greet,exclaim,adding);
 welcome(person);
-// console.log(welcome(person));
 
 
+let hello = compose(adding,exclaim,greet);
+hello(person);
 
+describe('welcome', () => {
+  it('returns a string ', () => {
+    expect(welcome('Dana')).toEqual('HELLO DANA! nice to meet you <3');
+    expect(welcome('Shatha')).toEqual('HELLO SHATHA! nice to meet you <3');
+    expect(welcome('')).toEqual('HELLO ! nice to meet you <3');
+  })
+})
 
+describe('hello', () => {
+  it('returns a string ', () => {
+    expect(hello('Dana')).toEqual('HELLO DANA! nice to meet you <3');
+    expect(hello('Shatha')).toEqual('HELLO SHATHA! nice to meet you <3');
+    expect(hello('')).toEqual('HELLO ! nice to meet you <3');
+  })
+})
