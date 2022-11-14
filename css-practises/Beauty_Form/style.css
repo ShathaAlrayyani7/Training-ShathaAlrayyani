@@ -1,0 +1,39 @@
+@import 'Components/ImgContainer/style.css';
+@import url('Components/Button/style.css');
+@import url('Components/Form/style.css');
+@import url('Components/Form/FormItem/style.css');
+@import url('Components/FormContainer/style.css');
+@import url('global.css');
+*{
+    box-sizing: border-box;
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    align-items: center;
+    background-color: var(--backgroundColor);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px){
+  
+    .backgroundImg{
+        height: 350px;
+        width: 350px;
+    }
+
+    .formContainer{
+        flex-direction: column;
+        height: 600px;
+        width: 350px;
+    }
+
+    .formContainer.register{
+        height: 750px;
+    }
+}

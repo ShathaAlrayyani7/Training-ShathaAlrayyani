@@ -4,13 +4,13 @@ export const login ={
     label:[
         {
             for : "email",
-            img : "./assets/icons8-secured-letter-64.png",
+            img : "./assets/icons8-secured-letter-64 (1).png",
             text :"",
             
         },
         {
             for : "psw",
-            img : "./assets/icons8-security-shield-green-100.png",
+            img : "./assets/icons8-security-shield-green-50.png",
             text :"",
         },
     ],
@@ -24,7 +24,7 @@ export const login ={
         {
             name : "psw",
             type :"password",
-            placeholder:"",
+            placeholder:"Password",
             value:""
         },
     ],
@@ -41,22 +41,22 @@ export const register = {
         label:[
             {
                 for : "email",
-                img : "./assets/icons8-secured-letter-64.png",
+                img : "./assets/icons8-secured-letter-64 (1).png",
                 text :"",
             },
             {
                 for : "userName",
-                img : "./assets/icons8-account-64.png",
+                img : "./assets/icons8-account-64 (1).png",
                 text :"",
             },
             {
                 for : "psw",
-                img : "./assets/icons8-security-shield-green-100.png",
+                img : "./assets/icons8-security-shield-green-50.png",
                 text :"",
             },
             {
                 for : "psw",
-                img : "./assets/icons8-security-shield-green-100.png",
+                img : "./assets/icons8-security-shield-green-50.png",
                 text :"",
             },
             {
@@ -117,4 +117,3 @@ export const register = {
         }
     }
 
-// export default { login, register};

@@ -1,17 +1,15 @@
-@import 'Components/ImgContainer/style.css';
-@import url('Components/Button/style.css');
-@import url('Components/Form/style.css');
-@import url('Components/Form/FormItem/style.css');
-@import url('Components/FormContainer/style.css');
-
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-.body{
-    height: 100vh;
-    width: 100%;
+:root{
+    --backgroundColor : rgb(222, 224, 243);
+    --black : black;
+    --buttonBg: #6495ED;
+    --buttonColor:#004;
+    --center-z-index: 10;
+    --font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --hands-z-index: 5;
+    --iconBg:#6495ED;
+    --linkColor :blue;
+    --linkHover:rgb(135, 135, 226);
+    --validationColor : red;
+    --hover: #4682b4;
 
 }

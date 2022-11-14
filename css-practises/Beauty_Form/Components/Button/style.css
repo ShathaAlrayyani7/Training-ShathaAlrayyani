@@ -1,0 +1,18 @@
+@import url('../../global.css');
+
+button{
+    background-color: var(--buttonBg);
+    border-radius: 5px;
+    border: none;
+    box-shadow:0px 0.5px 1.5px var(--buttonColor);
+    color: var(--buttonColor);
+    font-family:var(--font);
+    font-size: 1rem;
+    padding: 6px 14px;
+    transition: 0.5s ;
+}
+
+button:hover{
+    background-color: var(--hover);
+    transition: 0.5s ;
+}

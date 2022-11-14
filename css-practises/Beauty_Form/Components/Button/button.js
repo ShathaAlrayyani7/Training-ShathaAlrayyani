@@ -1,6 +1,5 @@
 'use strict';
 
-
 export default class Button{
     constructor(cls,type,text){
         this.buttonContainer = document.createElement('div')
@@ -20,11 +19,4 @@ export default class Button{
         return this.buttonContainer
     }
 
-    // submit = () =>{
-        
-    // }
-
-    // register = () => {
-
-    // }
 }
