@@ -50,25 +50,16 @@ export const register = {
                 text :"",
             },
             {
-                for : "psw",
+                for : "psw1",
                 img : "./assets/icons8-security-shield-green-50.png",
                 text :"",
             },
             {
-                for : "psw",
+                for : "psw2",
                 img : "./assets/icons8-security-shield-green-50.png",
                 text :"",
             },
-            {
-                for : "gender1",
-                img : "",
-                text :"Male",
-            },
-            {
-                for : "gender2",
-                img : "",
-                text :"Female",
-            },
+            
         
         ],
         input:[
@@ -117,3 +108,27 @@ export const register = {
         }
     }
 
+export const genderLabel = {
+    label:[
+        {
+            for : "gender1",
+            text :"Male",
+        },
+        {
+            for : "gender2",
+            text :"Female",
+        }
+    ],
+    input : [
+        {
+            name : "gender",
+            type :"radio",
+            value:"Male"
+        },
+        {
+            name : "gender",
+            type :"radio",
+            value:"Female"
+        }
+    ]
+}

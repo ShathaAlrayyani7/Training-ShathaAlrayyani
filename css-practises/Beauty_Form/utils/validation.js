@@ -34,21 +34,30 @@ export const validPsw1 = (psw)=>{
     let regx = /^[a-zA-Z0-9!@#$%^&*]{8,16}$/;
     let text = ''
     let validMsg = document.getElementsByClassName('valid-psw')[0];
-
+    let numbers = /[0-9]/g
+    let uppercase = /[A-Z]/g
     if (regx.test(psw)){
         validMsg.innerText = text
         return true
     }else{
-        text = ` -Your password must be more than 8 characters and less than 16 
-        \n -Your password must contain at least one uppercase letter.
-        \n -Your password must contain at least one digit and special character`
-        validMsg.innerText = text
+        if(psw.length < 8 || psw.legth> 16){
+            let text1 = ` -Your password must be more than 8 characters and less than 16 \n`
+            validMsg.innerText = text1
+        }
+        if(!psw.match(numbers)){
+            let text2 =  `-Your password must contain at least one digit`
+            validMsg.innerText += text2
+        }
+        if(!psw.match(uppercase)){
+            let text3 = `-Your password must contain at least one uppercase letter.\n`
+            validMsg.innerText += text3
+        }
         return false
     }
 }
 
 export const validPsw2 = (psw1,psw2)=>{
-
+    validPsw1(psw1)
     let validMsg = document.getElementsByClassName('valid-psw')[1];
     let text = ''
 

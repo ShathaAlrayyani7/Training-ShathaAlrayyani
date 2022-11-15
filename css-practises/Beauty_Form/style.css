@@ -1,8 +1,4 @@
-@import 'Components/ImgContainer/style.css';
-@import url('Components/Button/style.css');
-@import url('Components/Form/style.css');
-@import url('Components/Form/FormItem/style.css');
-@import url('Components/FormContainer/style.css');
+
 @import url('global.css');
 *{
     box-sizing: border-box;
