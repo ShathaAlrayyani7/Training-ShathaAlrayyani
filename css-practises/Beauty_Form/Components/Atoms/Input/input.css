@@ -1,0 +1,12 @@
+
+input{
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+input:focus{
+    box-shadow: 0 0 2px 2px var(--linkColor);
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.5rem;
+}

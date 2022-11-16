@@ -1,0 +1,10 @@
+.link{
+    color: var(--linkColor);
+    text-decoration: underline;
+}
+
+.link:hover{
+    color: var(--linkHover);
+    cursor: pointer;
+}
+

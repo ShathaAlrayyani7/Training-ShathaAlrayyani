@@ -1,0 +1,6 @@
+.title{
+    align-self: center;
+    box-shadow: 0 5px 5px -5px;
+    color: var(--buttonColor);
+    padding: 1rem 4rem;
+}

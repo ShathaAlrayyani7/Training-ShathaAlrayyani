@@ -1,0 +1,19 @@
+.formItem{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item{
+    display: flex;
+    gap: 0.2rem;
+}
+
+.iconImg{
+    background-color: var(--iconBg);
+    border-radius: 5px;
+    padding: 0.4rem;
+    width: 50px;
+}
+
+
+

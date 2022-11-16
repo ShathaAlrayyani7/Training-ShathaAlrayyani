@@ -1,3 +1,4 @@
+
 :root{
     --backgroundColor : rgb(222, 224, 243);
     --black : black;
@@ -6,10 +7,10 @@
     --center-z-index: 10;
     --font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --hands-z-index: 5;
+    --hover: #4682b4;
     --iconBg:#6495ED;
     --linkColor :blue;
     --linkHover:rgb(135, 135, 226);
     --validationColor : red;
-    --hover: #4682b4;
 
 }

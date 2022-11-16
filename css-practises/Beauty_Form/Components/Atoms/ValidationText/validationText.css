@@ -1,0 +1,7 @@
+.valid{
+    color: var(--validationColor);
+    font-family:var(--font);
+    font-size: 0.8rem;
+    margin: 0.2rem;
+    text-align: justify;
+}

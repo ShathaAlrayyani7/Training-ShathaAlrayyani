@@ -1,0 +1,26 @@
+
+.form{
+    display: flex;
+    flex-direction: column;
+    grid-area: form;
+    gap: 1rem;
+    padding: 1rem;
+    height: 400px;
+    width: 400px;
+}
+
+
+.form.register{
+    height: 900px;
+    width: 300px;
+}
+
+.text{
+    color: var(--black);
+}
+
+
+.select{
+    width: 300px;
+    padding: 0.7rem;
+}

@@ -1,5 +1,5 @@
 'use strict';
-import {validEmail, validUserName, validPsw1, validPsw2, validSignIn} from '../../utils/function.js'
+import {validEmail, validUserName, validPsw1, validPsw2, validSignIn} from '../../../utils/validation.js'
 
 export default class Button{
     constructor(cls,type,text){
@@ -11,8 +11,7 @@ export default class Button{
         button.setAttribute('type', type);
         button.innerText = text;
         this.buttonContainer.appendChild(button);
-
-        if(text == 'login'){
+        if(text == 'Login'){
             button.addEventListener( 'click', this.submit)
         }else{
             button.addEventListener( 'click', this.register)
@@ -26,7 +25,6 @@ export default class Button{
     submit = (e) =>{
 
         e.preventDefault();
-
         let email = document.getElementsByClassName(`input-email`)[0].value;
         let psw = document.getElementsByClassName(`input-psw`)[0].value;
         validSignIn(email,psw);
@@ -38,11 +36,9 @@ export default class Button{
         e.preventDefault();
 
         let email = document.getElementsByClassName(`input-email`)[0].value;
-        console.log(email);
         validEmail(email)
 
         let user = document.getElementsByClassName(`input-userName`)[0].value;
-        console.log(user);
         validUserName(user)
 
         let psw1 = document.getElementsByClassName(`input-psw`)[0].value;

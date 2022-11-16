@@ -1,5 +1,15 @@
+@import url('./Atoms/Button/button.css');
+@import url('./Components/Molecules/FormItem/formItem.css');
+@import url('./Components/Templates/FormContainer/formContainer.css');
+@import url('./Components/Atoms/Button/button.css');
+@import url('./Components/Atoms/Input/input.css');
+@import url('./Components/Organisms/Form/form.css');
+@import url('./Components/Molecules/Radio/radio.css');
+@import url('./Components/Atoms/FormTitle/formTitle.css');
+@import url('./Components/Atoms/SwitchLink/switchLink.css');
+@import url('./Components/Atoms/ValidationText/validationText.css');
+@import url('./global.css');
 
-@import url('global.css');
 *{
     box-sizing: border-box;
     font-family: var(--font);
@@ -8,12 +18,17 @@
 }
 
 body{
+    height: 100vh;
+    width: 100%;
+}
+
+.app{
     align-items: center;
     background-color: var(--backgroundColor);
+    background-image: url('https://images.hdqwalls.com/wallpapers/hatake-kakashi-naruto-anime-q5.jpg');
     display: flex;
     height: 100vh;
     justify-content: center;
-    width: 100%;
 }
 
 @media screen and (max-width: 600px){
@@ -23,13 +38,15 @@ body{
         width: 350px;
     }
 
-    .formContainer{
-        flex-direction: column;
+    .formContainer.login{
+        grid-template: [row1-start]'form' 60%[row1-end] [row2-start]'img' 40%[row2-end]  / 350px;
         height: 600px;
         width: 350px;
     }
 
     .formContainer.register{
-        height: 750px;
+        height: 700px;
+        padding: 1rem;
+        width: 350px;
     }
 }

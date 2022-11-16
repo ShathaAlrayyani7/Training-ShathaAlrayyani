@@ -1,0 +1,28 @@
+
+.formContainer{
+    background-color: var(--backgroundColor);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: grid;
+    gap: 1rem;
+    grid-template: [row1-start]'form img' 100%[row1-end]/ 350px 300px;
+    height: 400px;
+    width: 700px;
+} 
+
+.formContainer.register{
+    height: 750px;
+    padding: 1rem;
+    width: 400px;
+}
+
+.backgroundImg{
+    grid-area: img;
+    height: 400px;
+    width: 350px;
+}
+
+.backgroundImg.register{
+    height: 0;
+    width: 0;
+}
