@@ -18,30 +18,31 @@
 // list.removeHead(); //yields '4'
 // list.tail.value;   //yields '5';
 
+class Node {
+  constructor(value = null) {
+    this.value = value;
+    this.next = null;
+  }
+}
 
-let LinkedList = () => {
+
+let LinkedList = function (){
   this.head = null;
 };
 
 
-// LinkedList.prototype.makeNode = function(value) {
-//   let node = {};
-//   node.value = value;
-//   node.next = null;
-//   return node;
-// };
-
-
-LinkedList.prototype.addToTail = function(value) {
-  let newNode = makeNode(value);
+LinkedList.prototype.addToTail = function(val) {
+  let newNode = new Node(val);
   let curr = this.head
-  if(!curr.value){
+  console.log(newNode);
+  console.log(curr);
+  if(!curr){
     this.head = newNode;
   }else{
     while(curr.next){
       curr = curr.next;
-      curr.next = newNode;
     }
+    curr.next = newNode;
   }
 
 };
@@ -55,8 +56,8 @@ LinkedList.prototype.removeHead = function(){
   else{
     this.head = next
     next = this.head.next
+    return curr
   }
-  return curr
 };
 
 LinkedList.prototype.contains = function(val){
@@ -87,16 +88,39 @@ LinkedList.prototype.toString = function(){
 
 let node = new LinkedList();
 
-// let one = node.makeNode('a');
-// let two = node.makeNode('b');
-// let three = node.makeNode('c');
+let one = new Node('a');
+let two = new Node('b');
+let three = new Node('c');
 
-node.addToTail('one')
-console.log(node.toString());
 
-node.addToTail('two')
-console.log(node.toString());
+describe('#LinkedList', () => {
 
-node.addToTail('three');
-console.log(node.toString());
+  const list = new LinkedList();
+  list.addToTail(2);
+  list.addToTail(5);
+  list.addToTail(7);
 
+  it('test linked list addToTail', () => {
+    expect(list.toString()).toEqual('{ 2 } -> { 5 } -> { 7 } -> null');
+  });
+
+  it('test linked list method contains', () => {
+    expect(list.contains(7)).toEqual(true);
+    expect(list.contains(2)).toEqual(true);
+    expect(list.contains(3)).toEqual(false);
+
+  });
+});
+
+describe('#LinkedList', () => {
+
+  const list = new LinkedList();
+  list.addToTail(2);
+  list.addToTail(5);
+  list.addToTail(7);
+  list.removeHead()
+
+  it('test linked list removeHead method', () => {
+    expect(list.removeHead()).toEqual('{ 5 } -> { 7 } -> null');
+  });
+});
