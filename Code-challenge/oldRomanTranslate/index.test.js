@@ -50,5 +50,5 @@ const translateRomanNumeral = (romanNumeral)=> {
 
 };
 
-translateRomanNumeral('MCMIV')
+translateRomanNumeral('IV')
 //1904
