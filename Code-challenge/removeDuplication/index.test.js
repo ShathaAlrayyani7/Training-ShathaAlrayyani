@@ -10,7 +10,18 @@
  */
 
 function removeDuplication(str) {
+  var result = "";
+    var obj = {};
+    for(i=0;i<str.length;i++){
+      let temp = str[i]
+      if(!obj[temp]){
+        obj[temp] =1
+        result = result+temp;
+      }
+    }
+    return result;
   // return to do ...
+
 }
 
 describe('Tests', () => {

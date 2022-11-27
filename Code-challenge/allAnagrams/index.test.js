@@ -40,7 +40,7 @@ const allAnagrams = function(string) {
   return newArr
 }
 
-let temp = "abcd"
+let temp = "abc"
 
 
 console.log(allAnagrams(temp));
